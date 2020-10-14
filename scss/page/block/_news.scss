@@ -3,7 +3,6 @@
   &__list {
     @include sm() {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
     }
   }
@@ -11,13 +10,20 @@
     width: 100%;
     margin-bottom: get_vw(45);
     @include sm() {
-      width: 45%;
+      width: 50%;
       margin-bottom: get_vw-sm(45);
+      padding: 0 get_vw-sm(30);
     }
     @include md() {
-      width: 20%;
-      max-width: 325px;
+      width: 25%;
       margin-bottom: 45px;
+      padding: 0 30px;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
     }
   }
   &__thumb {
