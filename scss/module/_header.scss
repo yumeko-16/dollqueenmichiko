@@ -1,0 +1,165 @@
+.header {
+  width: 100%;
+  &__bar {
+    width: 100%;
+    height: get_vw(40);
+    background-color: $accent;
+    @include sm() {
+      height: get_vw-sm(40);
+    }
+    @include md() {
+      height: 40px;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: get_vw(10) get_vw(30);
+    @include sm() {
+      padding: get_vw-sm(10) get_vw(30);
+    }
+    @include md() {
+      padding: 10px 30px;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      width: get_vw(210);
+      height: get_vw(90);
+      @include sm() {
+        width: get_vw-sm(210);
+        height: get_vw-sm(90);
+      }
+      @include md() {
+        width: 210px;
+        height: 90px;
+      }
+    }
+  }
+  &__global-nav {
+    display: none;
+    @include sm() {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__nav-item {
+    font-weight: 600;
+    @include sm() {
+      font-size: get_vw-sm(17);
+    }
+    @include md() {
+      font-size: 17px;
+    }
+  }
+  &__nav-item:not(:last-child) {
+    @include sm() {
+      margin-right: get_vw-sm(20);
+    }
+    @include md() {
+      margin-right: 20px;
+    }
+  }
+  &__nav-txt {
+    display: block;
+    text-align: center;
+    &--en {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: get_vw-sm(22);
+      @include sm() {
+        font-size: get_vw-sm(22);
+      }
+      @include md() {
+        font-size: 22px;
+      }
+    }
+    &--jp {
+      font-size: get_vw(12);
+      @include sm() {
+        font-size: get_vw-sm(12);
+      }
+      @include md() {
+        font-size: 12px;
+      }
+    }
+  }
+  &__sp {
+    &-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: get_vw(147);
+      background-color: $bgc;
+      transition: all .6s;
+      z-index: 200;
+      // overflow-y: auto;
+    }
+    &-item {
+      padding: get_vw(20);
+      text-align: center;
+    }
+  }
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 300;
+    @include sm() {
+      display: none;
+    }
+    &-inner {
+      position: relative;
+      width: get_vw(40);
+      height: get_vw(30);
+    }
+    &-line {
+      display: block;
+      position: absolute;
+      width: get_vw(40);
+      height: get_vw(5);
+      background: #636363;
+      transition: .5s;
+      border-radius: get_vw(50);
+      &--1 {
+        top: 0;
+      }
+      &--2 {
+        top: get_vw(13);
+      }
+      &--3 {
+        top: get_vw(26);
+      }
+    }
+  }
+}
+
+.nav-open {
+  & .header__sp-nav {
+    right: 0;
+  }
+  & .header__burger-line {
+    &--1 {
+      top: get_vw(13);
+      transform: rotate(225deg);
+    }
+    &--2 {
+      opacity: 0;
+    }
+    &--3 {
+      transform: rotate(-225deg);
+      top: get_vw(13);
+    }
+  }
+}

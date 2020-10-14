@@ -1,0 +1,35 @@
+body {
+  box-sizing: border-box;
+  font-family: "Rubik", "NotoSansJP";
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: get_vw(16);
+  line-height: 1.8;
+  letter-spacing: .1em;
+  color: $txt;
+  @include sm() {
+    font-size: get_vw-sm(16);
+  }
+  @include md() {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=search]:focus,
+input[type=url]:focus,
+textarea:focus {
+  outline: none;
+}
