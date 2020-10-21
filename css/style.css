@@ -982,14 +982,6 @@ textarea:focus {
   }
 }
 
-.news__article:first-child {
-  padding-left: 0;
-}
-
-.news__article:last-child {
-  padding-right: 0;
-}
-
 .news__thumb {
   display: block;
   width: 100%;
@@ -1023,5 +1015,20 @@ textarea:focus {
   .news__heading {
     padding: 10px 0;
   }
+}
+
+.article {
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .article {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.article__nav {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
