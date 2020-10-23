@@ -40,7 +40,7 @@
             <li class="header__nav-item">
               <a href="">
                 <span class="header__nav-txt header__nav-txt--en">NEWS</span>
-                <span class="header__nav-txt header__nav-txt--jp">ニューム</span>
+                <span class="header__nav-txt header__nav-txt--jp">ニュース</span>
               </a>
             </li>
             <li class="header__nav-item">
@@ -68,7 +68,7 @@
             <li class="header__sp-item">
               <a href="">
                 <span class="header__nav-txt header__nav-txt--en">NEWS</span>
-                <span class="header__nav-txt header__nav-txt--jp">ニューム</span>
+                <span class="header__nav-txt header__nav-txt--jp">ニュース</span>
               </a>
             </li>
             <li class="header__sp-item">

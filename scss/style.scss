@@ -5,6 +5,9 @@
 @import './mixin/conversion';
 @import './mixin/section';
 @import './mixin/title';
+@import './mixin/content';
+@import './mixin/group';
+@import './mixin/article';
 @import './mixin/scroll-animation';
 
 @import './base/ress';
@@ -18,4 +21,3 @@
 
 @import './page/block/mv';
 @import './page/block/news';
-@import './page/news/block/article';
