@@ -30,32 +30,14 @@
           <h1><a href="<?php echo home_url() ?>" class="header__img"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="人形作家 みちこ"></a></h1>
         </div>
         <nav>
-          <ul class="header__global-nav">
-            <li class="header__nav-item">
-              <a href="/">
-                <span class="header__nav-txt header__nav-txt--en">HOME</span>
-                <span class="header__nav-txt header__nav-txt--jp">ホーム</span>
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a href="">
-                <span class="header__nav-txt header__nav-txt--en">NEWS</span>
-                <span class="header__nav-txt header__nav-txt--jp">ニュース</span>
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a href="">
-                <span class="header__nav-txt header__nav-txt--en">DOLL</span>
-                <span class="header__nav-txt header__nav-txt--jp">作品</span>
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a href="">
-                <span class="header__nav-txt header__nav-txt--en">CONTACT</span>
-                <span class="header__nav-txt header__nav-txt--jp">お問い合わせ</span>
-              </a>
-            </li>
-          </ul>
+          <?php
+          $args = array(
+            'menu' => 'global-navigation',
+            'menu_class' => 'header__global-nav',
+            'container' => false,
+          );
+          wp_nav_menu($args);
+          ?>
         </nav>
         <nav class="header__sp-nav">
           <ul>

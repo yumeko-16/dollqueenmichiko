@@ -53,43 +53,44 @@
     }
   }
   &__nav-item {
-    font-weight: 600;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: get_vw-sm(22);
     @include sm() {
-      font-size: get_vw-sm(17);
-    }
-    @include md() {
-      font-size: 17px;
-    }
-  }
-  &__nav-item:not(:last-child) {
-    @include sm() {
-      margin-right: get_vw-sm(20);
-    }
-    @include md() {
-      margin-right: 20px;
-    }
-  }
-  &__nav-txt {
-    display: block;
-    text-align: center;
-    &--en {
-      font-family: 'Fjalla One', sans-serif;
       font-size: get_vw-sm(22);
+    }
+    @include md() {
+      font-size: 22px;
+    }
+    &:not(:last-child) {
       @include sm() {
-        font-size: get_vw-sm(22);
+        margin-right: get_vw-sm(20);
       }
       @include md() {
-        font-size: 22px;
+        margin-right: 20px;
       }
     }
-    &--jp {
-      font-size: get_vw(12);
-      @include sm() {
-        font-size: get_vw-sm(12);
+    a {
+      &::after {
+        display: block;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: get_vw(12);
+        @include sm() {
+          font-size: get_vw-sm(12);
+        }
+        @include md() {
+          font-size: 12px;
+        }
       }
-      @include md() {
-        font-size: 12px;
-      }
+    }
+    &:nth-child(1) a::after {
+      content: "ホーム";
+    }
+    &:nth-child(2) a::after {
+      content: "ニュース";
+    }
+    &:nth-child(3) a::after {
+      content: "お問い合わせ";
     }
   }
   &__sp {
