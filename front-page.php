@@ -9,16 +9,9 @@
     </section>
     <section class="section news">
       <div class="section__inner">
-        <h2 class="title">
-          <span class="title__txt title__txt--en">NEWS</span>
-          <span class="title__txt title__txt--jp">ニュース</span>
-        </h2>
+        <h2 class="title">NEWS</h2>
         <?php get_template_part('loop', 'news'); ?>
-        <div>
-          <?php
-          wp_list_categories( $args );
-          ?>
-        </div>
+        <?php echo the_category(); ?>
       </div>
     </section>
   <?php endif; ?>

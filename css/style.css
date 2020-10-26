@@ -63,12 +63,15 @@
   margin-bottom: 3.125vw;
   padding-bottom: 6.25vw;
   text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 5.625vw;
 }
 
 @media (min-width: 481px) {
   .title {
     margin-bottom: 1.95313vw;
     padding-bottom: 3.90625vw;
+    font-size: 3.51563vw;
   }
 }
 
@@ -76,43 +79,7 @@
   .title {
     margin-bottom: 15px;
     padding-bottom: 30px;
-  }
-}
-
-.title__txt {
-  display: block;
-}
-
-.title__txt--en {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 5.625vw;
-}
-
-@media (min-width: 481px) {
-  .title__txt--en {
-    font-size: 3.51563vw;
-  }
-}
-
-@media (min-width: 769px) {
-  .title__txt--en {
     font-size: 27px;
-  }
-}
-
-.title__txt--jp {
-  font-size: 3.54167vw;
-}
-
-@media (min-width: 481px) {
-  .title__txt--jp {
-    font-size: 2.21354vw;
-  }
-}
-
-@media (min-width: 769px) {
-  .title__txt--jp {
-    font-size: 17px;
   }
 }
 
