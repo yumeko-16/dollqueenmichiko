@@ -41,6 +41,14 @@
   }
 }
 
+.section:nth-child(odd) {
+  background-color: #fff;
+}
+
+.section:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
 .section__inner {
   max-width: 1660px;
   margin: 0 auto;
@@ -994,16 +1002,8 @@ textarea:focus {
   }
 }
 
-.mv {
-  background-color: #fff;
-}
-
 .mv__img {
   display: block;
   width: 100%;
-}
-
-.news {
-  background-color: #f3f3f3;
 }
 /*# sourceMappingURL=style.css.map */

@@ -17,6 +17,12 @@
       padding: 50px 0;
     }
   }
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+  &:nth-child(even) {
+    background-color: #f3f3f3;
+  }
   &__inner {
     max-width: 1660px;
     margin: 0 auto;
