@@ -42,7 +42,7 @@
         ?>
 
         <div class="content__center">
-          <a href="<?php echo esc_url( $category_link ); ?>" title="NEWS" class="content__btn">MORE</a>
+          <a href="<?php echo esc_url( $category_link ); ?>" title="NEWS" class="content__btn">VIEW MORE</a>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
       ?>
 
       <div class="content__center">
-        <a href="<?php echo esc_url( $category_link ); ?>" title="DOLL" class="content__btn">MORE</a>
+        <a href="<?php echo esc_url( $category_link ); ?>" title="DOLL" class="content__btn">VIEW MORE</a>
       </div>
     </div>
   </section>

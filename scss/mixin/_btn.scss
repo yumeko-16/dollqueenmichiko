@@ -7,6 +7,8 @@ $initType: 'normal';
     padding: get_vw(10) 0;
     text-align: center;
     border: get_vw(1) solid #000;
+    transition: all .3s;
+    font-family: 'Fjalla One', sans-serif;
     @include sm() {
       padding: get_vw-sm(10) 0;
       border: get_vw-sm(1) solid #000;
@@ -16,28 +18,12 @@ $initType: 'normal';
       border: 1px solid #000;
     }
     &:hover {
-    }
-  }
-
-  @if( $type == 'header' ) {
-    @include sm() {
-    }
-    @include md() {
-    }
-    &:hover {
+      background-color: $btn__normal--hover;
+      color: #fff;
     }
   }
 
   @if( $type == 'contact' ) {
-    @include sm() {
-    }
-    @include md() {
-    }
-    &:hover {
-    }
-  }
-
-  @if( $type == 'back' ) {
     @include sm() {
     }
     @include md() {

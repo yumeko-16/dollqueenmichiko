@@ -119,6 +119,9 @@
   padding: 2.08333vw 0;
   text-align: center;
   border: 0.20833vw solid #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 @media (min-width: 481px) {
@@ -133,6 +136,11 @@
     padding: 10px 0;
     border: 1px solid #000;
   }
+}
+
+.content__btn:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 .group {
