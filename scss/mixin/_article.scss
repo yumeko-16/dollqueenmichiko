@@ -32,6 +32,10 @@
     }
     &:hover {
       background-color: #f8f8f8;
+      transition: all 0.3s ease 0s;
+      .article__heading {
+        color: $main;
+      }
     }
   }
   &__thumb {

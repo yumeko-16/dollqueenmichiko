@@ -223,6 +223,12 @@
 
 .article--news:hover {
   background-color: #f8f8f8;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.article--news:hover .article__heading {
+  color: #9c82a2;
 }
 
 .article__thumb {

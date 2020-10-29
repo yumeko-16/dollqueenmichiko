@@ -7,8 +7,8 @@
     ?>
     <li class="article article--news">
       <a href="<?php the_permalink(); ?>">
-        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
-        <h3><?php the_title(); ?></h3>
+        <time datetime="<?php the_time('Y-m-d'); ?>" class="news__time"><?php the_time('Y.m.d(D)'); ?></time>
+        <h3 class="article__heading"><?php the_title(); ?></h3>
       </a>
     </li>
     <?php

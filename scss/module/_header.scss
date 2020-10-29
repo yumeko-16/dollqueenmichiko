@@ -3,7 +3,7 @@
   &__bar {
     width: 100%;
     height: get_vw(40);
-    background-color: $accent;
+    background-color: $main;
     @include sm() {
       height: get_vw-sm(40);
     }
