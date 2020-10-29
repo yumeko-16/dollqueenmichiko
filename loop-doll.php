@@ -27,6 +27,11 @@
       <p>記事はありません。</p>
     <?php endif; ?>
   <?php endif; ?>
-
-  <?php if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
 </ul>
+<?php
+$custom_wp_pagenavi = array(
+  'wrapper_tag' => 'nav',
+  'wrapper_class' => 'pagenavi'
+);
+if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi($custom_wp_pagenavi); }
+?>
