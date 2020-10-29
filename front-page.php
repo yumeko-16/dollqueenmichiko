@@ -95,6 +95,24 @@
     </div>
   </section>
   <?php endfor; ?>
+
+  <section class="section">
+    <div class="section__inner clearfix">
+      <h2 class="title profile__title">PROFILE</h2>
+      <div class="profile__wrap-img"><img src="<?php echo get_template_directory_uri(); ?>/images/home/profile.jpg" alt="プロフィール" class="profile__img"></div>
+      <div class="profile__introduction">
+        <h4 class="profile__name">前野 美智子</h4>
+        <p>
+          2017年6月28日に日本デビュー。<br>
+          50代を中心とした圧倒的な支持でデビューから2年連続の紅白歌合戦にも出演を果たす。<br>
+          さらに2019年春には日本デビューしてからの夢であった、ドームツアーを実施。<br>
+          勢い止まらず、11月20日（水）にJAPAN 2nd ALBUM『&TWICE』をリリース！<br>
+          オリコン週間アルバムランキングで初週売上12.4万枚で初登場1位を獲得。5/13付で韓国7thミニアルバム『FANCY YOU』が獲得して以来、通算5作目の1位となり、「海外⼥性アーティストのアルバム1位獲得作品数」が歴代2位タイとなった。<br>
+          2019年年末には「第70回紅白歌合戦」にも3年連続で出場。
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>

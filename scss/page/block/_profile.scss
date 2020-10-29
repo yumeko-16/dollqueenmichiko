@@ -1,0 +1,59 @@
+.profile {
+  &__title {
+    &.title {
+      &::after {
+        display: block;
+        content: "プロフィール";
+        font-size: get_vw(12);
+        @include sm() {
+          font-size: get_vw-sm(12);
+        }
+        @include md() {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__wrap-img {
+    @include md() {
+      position: relative;
+      left: 1.5%;
+      float: left;
+      width: 50%;
+      z-index: 2;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__introduction {
+    padding: get_vw(30);
+    background-color: $main;
+    color: #fff;
+    @include sm() {
+      padding: get_vw-sm(30);
+    }
+    @include md() {
+      position: relative;
+      left: -1.5%;
+      float: left;
+      width: 50%;
+      margin-top: 25px;
+      padding: 50px 3% 50px 6%;
+    }
+  }
+  &__name {
+    margin-bottom: get_vw(30);
+    text-align: center;
+    font-size: get_vw(20);
+    @include sm() {
+      margin-bottom: get_vw-sm(30);
+      font-size: get_vw-sm(20);
+    }
+    @include md() {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+}

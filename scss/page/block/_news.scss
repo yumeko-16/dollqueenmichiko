@@ -2,7 +2,7 @@
   &__title.title {
     &::after {
       display: block;
-      content: 'ニュース';
+      content: "ニュース";
       font-size: get_vw(12);
       @include sm() {
         font-size: get_vw-sm(12);

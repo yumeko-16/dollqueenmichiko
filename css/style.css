@@ -50,10 +50,14 @@
   background-color: #f3f3f3;
 }
 
+.section:nth-child(4) {
+  background: #f5ebe9;
+}
+
 .section__inner {
   max-width: 1660px;
   margin: 0 auto;
-  padding: 0 6.25vw;
+  padding: 0;
 }
 
 @media (min-width: 481px) {
@@ -309,6 +313,12 @@
   .pagenavi .current {
     font-size: 20px;
   }
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 .sa {
@@ -1156,7 +1166,7 @@ textarea:focus {
 
 .news__title.title::after {
   display: block;
-  content: 'ニュース';
+  content: "ニュース";
   font-size: 2.5vw;
 }
 
@@ -1190,21 +1200,97 @@ textarea:focus {
   }
 }
 
-.title.doll__title::after {
+.doll__title.title::after {
   display: block;
-  content: '作品';
+  content: "作品";
   font-size: 2.5vw;
 }
 
 @media (min-width: 481px) {
-  .title.doll__title::after {
+  .doll__title.title::after {
     font-size: 1.5625vw;
   }
 }
 
 @media (min-width: 769px) {
-  .title.doll__title::after {
+  .doll__title.title::after {
     font-size: 12px;
+  }
+}
+
+.profile__title.title::after {
+  display: block;
+  content: "プロフィール";
+  font-size: 2.5vw;
+}
+
+@media (min-width: 481px) {
+  .profile__title.title::after {
+    font-size: 1.5625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile__title.title::after {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile__wrap-img {
+    position: relative;
+    left: 1.5%;
+    float: left;
+    width: 50%;
+    z-index: 2;
+  }
+}
+
+.profile__img {
+  display: block;
+  width: 100%;
+}
+
+.profile__introduction {
+  padding: 6.25vw;
+  background-color: #9c82a2;
+  color: #fff;
+}
+
+@media (min-width: 481px) {
+  .profile__introduction {
+    padding: 3.90625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile__introduction {
+    position: relative;
+    left: -1.5%;
+    float: left;
+    width: 50%;
+    margin-top: 25px;
+    padding: 50px 3% 50px 6%;
+  }
+}
+
+.profile__name {
+  margin-bottom: 6.25vw;
+  text-align: center;
+  font-size: 4.16667vw;
+}
+
+@media (min-width: 481px) {
+  .profile__name {
+    margin-bottom: 3.90625vw;
+    font-size: 2.60417vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile__name {
+    margin-bottom: 30px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
