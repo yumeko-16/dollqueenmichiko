@@ -1,6 +1,8 @@
 .footer {
   margin-top: auto;
   padding: get_vw(20) 0;
+  background-color: #636363;
+  color: #ccc;
   @include sm() {
     padding: get_vw-sm(20) 0;
   }
