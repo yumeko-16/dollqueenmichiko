@@ -4,4 +4,11 @@
     max-width: 800px;
     margin: 0 auto;
   }
+  &__center {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    @include _btn('normal');
+  }
 }

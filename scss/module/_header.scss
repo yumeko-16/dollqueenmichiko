@@ -115,6 +115,9 @@
         content: "ニュース";
       }
       &:nth-child(3) a::after {
+        content: "作品";
+      }
+      &:nth-child(4) a::after {
         content: "お問い合わせ";
       }
     }

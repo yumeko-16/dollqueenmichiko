@@ -1,24 +1,22 @@
-<div class="group">
+<h2 class="title doll__title"><?php wp_title(''); ?></h2>
+<ul class="group">
   <?php
   if ( have_posts() ) :
     while ( have_posts() ) : the_post();
   ?>
-  <article class="article">
-    <figure>
-    <?php if ( has_post_thumbnail() ): ?>
-      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'article__thumb')); ?></a>
-    <?php else: ?>
-      <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/noimage_180x180.png" alt="No Image" class="article__thumb"></a>
-    <?php endif; ?>
-    </figure>
-    <div class="article__caption">
-      <div class="article__categories">
-      <?php the_category(); ?>
-      </div>
-      <time datetime="<?php the_time('Y-m-d'); ?>"><a href="<?php the_permalink(); ?>"><?php the_time('Y.m.d(D)'); ?></a></time>
-      <h3 class="article__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    </div>
-  </article>
+  <li class="article">
+    <a href="<?php the_permalink(); ?>">
+      <figure>
+      <?php if ( has_post_thumbnail() ): ?>
+        <?php the_post_thumbnail('thumbnail', array('class' => 'article__thumb')); ?>
+      <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/noimage_180x180.png" alt="No Image" class="article__thumb">
+      <?php endif; ?>
+      </figure>
+      <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
+      <h3><?php the_title(); ?></h3>
+    </a>
+  </li>
   <?php
     endwhile;
   else:
@@ -31,4 +29,4 @@
   <?php endif; ?>
 
   <?php if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
-</div>
+</ul>

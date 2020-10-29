@@ -1,34 +1,27 @@
-<div class="group">
-  <?php
-  if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
-  ?>
-  <article class="article">
-    <figure>
-    <?php if ( has_post_thumbnail() ): ?>
-      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'article__thumb')); ?></a>
-    <?php else: ?>
-      <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/noimage_180x180.png" alt="No Image" class="article__thumb"></a>
+<h2 class="title news__title"><?php wp_title(''); ?></h2>
+<div class="content">
+  <ul class="group grooup--news">
+    <?php
+    if ( have_posts() ) :
+      while ( have_posts() ) : the_post();
+    ?>
+    <li class="article article--news">
+      <a href="<?php the_permalink(); ?>">
+        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
+        <h3><?php the_title(); ?></h3>
+      </a>
+    </li>
+    <?php
+      endwhile;
+    else:
+    ?>
+      <?php if ( is_search() ) : ?>
+        <p>検索結果はありませんでした。</p>
+      <?php else : ?>
+        <p>記事はありません。</p>
+      <?php endif; ?>
     <?php endif; ?>
-    </figure>
-    <div class="article__caption">
-      <div class="article__categories">
-      <?php the_category(); ?>
-      </div>
-      <time datetime="<?php the_time('Y-m-d'); ?>"><a href="<?php the_permalink(); ?>"><?php the_time('Y.m.d(D)'); ?></a></time>
-      <h3 class="article__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    </div>
-  </article>
-  <?php
-    endwhile;
-  else:
-  ?>
-    <?php if ( is_search() ) : ?>
-      <p>検索結果はありませんでした。</p>
-    <?php else : ?>
-      <p>記事はありません。</p>
-    <?php endif; ?>
-  <?php endif; ?>
 
-  <?php if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
+    <?php if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
+  </ul>
 </div>

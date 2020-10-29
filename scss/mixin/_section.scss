@@ -1,6 +1,7 @@
 .section {
   &:first-child {
     padding: get_vw(20) 0 get_vw(50);
+    background-color: #fff;
     @include sm() {
       padding: get_vw-sm(20) 0 get_vw-sm(50);
     }
@@ -17,10 +18,10 @@
       padding: 50px 0;
     }
   }
-  &:nth-child(odd) {
+  &:nth-child(2) {
     background-color: #fff;
   }
-  &:nth-child(even) {
+  &:nth-child(3) {
     background-color: #f3f3f3;
   }
   &__inner {

@@ -1,0 +1,26 @@
+.news {
+  &__title.title {
+    &::after {
+      display: block;
+      content: 'ニュース';
+      font-size: get_vw(12);
+      @include sm() {
+        font-size: get_vw-sm(12);
+      }
+      @include md() {
+        font-size: 12px;
+      }
+    }
+  }
+  &__time {
+    display: block;
+    margin-bottom: get_vw(15);
+    color: #999;
+    @include sm() {
+      margin-bottom: get_vw-sm(15);
+    }
+    @include md() {
+      margin-bottom: 15px;
+    }
+  }
+}
