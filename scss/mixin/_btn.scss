@@ -22,13 +22,4 @@ $initType: 'normal';
       color: #fff;
     }
   }
-
-  @if( $type == 'contact' ) {
-    @include sm() {
-    }
-    @include md() {
-    }
-    &:hover {
-    }
-  }
 }
