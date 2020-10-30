@@ -7,6 +7,13 @@
   &__center {
     display: flex;
     justify-content: center;
+    margin-top: get_vw(30);
+    @include sm() {
+      margin-top: get_vw-sm(30);
+    }
+    @include md() {
+      margin-top: 30px;
+    }
   }
   &__btn {
     @include _btn('normal');

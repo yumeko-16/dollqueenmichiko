@@ -1,12 +1,9 @@
 .group {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: get_vw(30);
   @include sm() {
-    margin-bottom: get_vw-sm(30);
   }
   @include md() {
-    margin-bottom: 30px;
   }
   &--news {
     flex-direction: column;

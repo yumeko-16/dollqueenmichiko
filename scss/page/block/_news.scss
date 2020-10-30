@@ -15,7 +15,7 @@
   &__time {
     display: block;
     margin-bottom: get_vw(15);
-    color: #999;
+    color: $time;
     @include sm() {
       margin-bottom: get_vw-sm(15);
     }

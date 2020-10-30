@@ -38,6 +38,38 @@
       }
     }
   }
+  &__title {
+    margin-bottom: get_vw(10);
+    font-size: get_vw(27);
+    @include sm() {
+      margin-bottom: get_vw-sm(10);
+      font-size: get_vw-sm(27);
+    }
+    @include md() {
+      margin-bottom: 10px;
+      font-size: 27px;
+    }
+  }
+  &__time {
+    display: block;
+    color: $time;
+    @include sm() {
+    }
+    @include md() {
+    }
+  }
+  &__content {
+    padding: get_vw(50) 0;
+    @include sm() {
+      padding: get_vw-sm(50) 0;
+    }
+    @include md() {
+      padding: 50px 0;
+    }
+    img {
+      display: block;
+    }
+  }
   &__thumb {
     display: block;
     width: 100%;
