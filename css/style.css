@@ -1293,4 +1293,8 @@ textarea:focus {
     font-size: 20px;
   }
 }
+
+.profile__txt {
+  line-height: 2;
+}
 /*# sourceMappingURL=style.css.map */

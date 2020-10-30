@@ -102,7 +102,7 @@
       <div class="profile__wrap-img"><img src="<?php echo get_template_directory_uri(); ?>/images/home/profile.jpg" alt="プロフィール" class="profile__img"></div>
       <div class="profile__introduction">
         <h4 class="profile__name">前野 美智子</h4>
-        <p>
+        <p class="profile__txt">
           2017年6月28日に日本デビュー。<br>
           50代を中心とした圧倒的な支持でデビューから2年連続の紅白歌合戦にも出演を果たす。<br>
           さらに2019年春には日本デビューしてからの夢であった、ドームツアーを実施。<br>
