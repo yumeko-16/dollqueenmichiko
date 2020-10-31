@@ -1,0 +1,69 @@
+.comments {
+  &__label {
+    width: 100%;
+    margin-bottom: get_vw(10);
+    @include md() {
+      width: 30%;
+      margin-bottom: initial;
+    }
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: get_vw(5) get_vw(10);
+    border: get_vw(1) solid #ddd;
+    @include sm() {
+      padding: get_vw-sm(5) get_vw-sm(10);
+      border: get_vw-sm(1) solid #ddd;
+    }
+    @include md() {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+    }
+  }
+  &__textarea {
+    display: block;
+    resize: none;
+  }
+}
+
+.wpcf7-form {
+  p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: get_vw(30);
+    @include sm() {
+      margin-bottom: get_vw-sm(30);
+    }
+    @include md() {
+      flex-direction: initial;
+      margin-bottom: 30px;
+    }
+    &:nth-child(5) {
+      margin-bottom: 0;
+    }
+    &:nth-child(6) {
+      display: block;
+      text-align: center;
+      margin-top: get_vw(30);
+      margin-bottom: 0;
+      @include sm() {
+        margin-top: get_vw-sm(30);
+      }
+      @include md() {
+        margin-top: 30px;
+      }
+    }
+  }
+  &-control-wrap {
+    width: 100%;
+    @include md() {
+      width: 70%;
+    }
+  }
+}
+
+.ajax-loader {
+  display: none !important;
+}
