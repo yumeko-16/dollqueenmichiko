@@ -1,4 +1,21 @@
 .comments {
+  &__unit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include md() {
+      flex-direction: initial;
+    }
+    &:not(:last-child) {
+      margin-bottom: get_vw(30);
+      @include sm() {
+        margin-bottom: get_vw-sm(30);
+      }
+      @include md() {
+        margin-bottom: 30px;
+      }
+    }
+  }
   &__label {
     width: 100%;
     margin-bottom: get_vw(10);
@@ -17,13 +34,21 @@
       border: get_vw-sm(1) solid #ddd;
     }
     @include md() {
+      width: 80%;
       padding: 5px 10px;
       border: 1px solid #ddd;
     }
+    input,
+    textarea {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__textarea {
-    display: block;
-    resize: none;
+    textarea {
+      display: block;
+      resize: none;
+    }
   }
   .form-submit {
     margin-top: get_vw(30);
@@ -69,12 +94,6 @@
       }
     }
   }
-  &-control-wrap {
-    width: 100%;
-    @include md() {
-      width: 70%;
-    }
-  }
 }
 
 .ajax-loader {
@@ -89,47 +108,6 @@
     }
     @include md() {
       padding-bottom: 30px;
-    }
-  }
-  &-form-author,
-  &-form-email,
-  &-form-comment {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    @include md() {
-      flex-direction: initial;
-    }
-    &:not(:last-child) {
-      margin-bottom: get_vw(30);
-      @include sm() {
-        margin-bottom: get_vw-sm(30);
-      }
-      @include md() {
-        margin-bottom: 30px;
-      }
-    }
-    label {
-      width: 100%;
-      @include md() {
-        width: 20%;
-        margin-bottom: initial;
-      }
-    }
-    input,
-    textarea {
-      width: 100%;
-      padding: get_vw(5) get_vw(10);
-      border: get_vw(1) solid #ddd;
-      @include sm() {
-        padding: get_vw-sm(5) get_vw-sm(10);
-        border: get_vw-sm(1) solid #ddd;
-      }
-      @include md() {
-        width: 80%;
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-      }
     }
   }
   &-reply-title {
@@ -165,5 +143,18 @@
       padding: 30px 0;
       border-width: 1px 0 0;
     }
+  }
+}
+
+.children {
+  margin-top: get_vw(30);
+  margin-left: get_vw(30);
+  @include sm() {
+    margin-top: get_vw-sm(30);
+    margin-left: get_vw-sm(30);
+  }
+  @include md() {
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }

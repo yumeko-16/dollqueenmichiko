@@ -309,6 +309,48 @@
   }
 }
 
+.comments__unit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  .comments__unit {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+}
+
+.comments__unit:not(:last-child) {
+  margin-bottom: 6.25vw;
+}
+
+@media (min-width: 481px) {
+  .comments__unit:not(:last-child) {
+    margin-bottom: 3.90625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .comments__unit:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .comments__label {
   width: 100%;
   margin-bottom: 2.08333vw;
@@ -336,12 +378,20 @@
 
 @media (min-width: 769px) {
   .comments__input, .comments__textarea {
+    width: 80%;
     padding: 5px 10px;
     border: 1px solid #ddd;
   }
 }
 
-.comments__textarea {
+.comments__input input,
+.comments__input textarea, .comments__textarea input,
+.comments__textarea textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.comments__textarea textarea {
   display: block;
   resize: none;
 }
@@ -452,16 +502,6 @@
   }
 }
 
-.wpcf7-form-control-wrap {
-  width: 100%;
-}
-
-@media (min-width: 769px) {
-  .wpcf7-form-control-wrap {
-    width: 70%;
-  }
-}
-
 .ajax-loader {
   display: none !important;
 }
@@ -479,89 +519,6 @@
 @media (min-width: 769px) {
   .comment:not(:last-child) {
     padding-bottom: 30px;
-  }
-}
-
-.comment-form-author, .comment-form-email, .comment-form-comment {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 769px) {
-  .comment-form-author, .comment-form-email, .comment-form-comment {
-    -webkit-box-orient: initial;
-    -webkit-box-direction: initial;
-    -webkit-flex-direction: initial;
-        -ms-flex-direction: initial;
-            flex-direction: initial;
-  }
-}
-
-.comment-form-author:not(:last-child), .comment-form-email:not(:last-child), .comment-form-comment:not(:last-child) {
-  margin-bottom: 6.25vw;
-}
-
-@media (min-width: 481px) {
-  .comment-form-author:not(:last-child), .comment-form-email:not(:last-child), .comment-form-comment:not(:last-child) {
-    margin-bottom: 3.90625vw;
-  }
-}
-
-@media (min-width: 769px) {
-  .comment-form-author:not(:last-child), .comment-form-email:not(:last-child), .comment-form-comment:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-.comment-form-author label, .comment-form-email label, .comment-form-comment label {
-  width: 100%;
-}
-
-@media (min-width: 769px) {
-  .comment-form-author label, .comment-form-email label, .comment-form-comment label {
-    width: 20%;
-    margin-bottom: initial;
-  }
-}
-
-.comment-form-author input,
-.comment-form-author textarea, .comment-form-email input,
-.comment-form-email textarea, .comment-form-comment input,
-.comment-form-comment textarea {
-  width: 100%;
-  padding: 1.04167vw 2.08333vw;
-  border: 0.20833vw solid #ddd;
-}
-
-@media (min-width: 481px) {
-  .comment-form-author input,
-  .comment-form-author textarea, .comment-form-email input,
-  .comment-form-email textarea, .comment-form-comment input,
-  .comment-form-comment textarea {
-    padding: 0.65104vw 1.30208vw;
-    border: 0.13021vw solid #ddd;
-  }
-}
-
-@media (min-width: 769px) {
-  .comment-form-author input,
-  .comment-form-author textarea, .comment-form-email input,
-  .comment-form-email textarea, .comment-form-comment input,
-  .comment-form-comment textarea {
-    width: 80%;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
   }
 }
 
@@ -617,6 +574,25 @@
     margin: 30px 0;
     padding: 30px 0;
     border-width: 1px 0 0;
+  }
+}
+
+.children {
+  margin-top: 6.25vw;
+  margin-left: 6.25vw;
+}
+
+@media (min-width: 481px) {
+  .children {
+    margin-top: 3.90625vw;
+    margin-left: 3.90625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .children {
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }
 
