@@ -247,20 +247,20 @@
 }
 
 .article__title {
-  margin-bottom: 2.08333vw;
+  margin: 10.41667vw 0 2.08333vw;
   font-size: 5.625vw;
 }
 
 @media (min-width: 481px) {
   .article__title {
-    margin-bottom: 1.30208vw;
+    margin: 10.41667vw 0 1.30208vw;
     font-size: 3.51563vw;
   }
 }
 
 @media (min-width: 769px) {
   .article__title {
-    margin-bottom: 10px;
+    margin: 50px 0 10px;
     font-size: 27px;
   }
 }
