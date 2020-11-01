@@ -579,20 +579,23 @@
 
 .children {
   margin-top: 6.25vw;
-  margin-left: 6.25vw;
+  padding-left: 6.25vw;
+  border-left: 0.20833vw solid #ddd;
 }
 
 @media (min-width: 481px) {
   .children {
     margin-top: 3.90625vw;
-    margin-left: 3.90625vw;
+    padding-left: 3.90625vw;
+    border-left: 0.13021vw solid #ddd;
   }
 }
 
 @media (min-width: 769px) {
   .children {
     margin-top: 30px;
-    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
   }
 }
 

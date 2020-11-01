@@ -148,13 +148,16 @@
 
 .children {
   margin-top: get_vw(30);
-  margin-left: get_vw(30);
+  padding-left: get_vw(30);
+  border-left: get_vw(1) solid #ddd;
   @include sm() {
     margin-top: get_vw-sm(30);
-    margin-left: get_vw-sm(30);
+    padding-left: get_vw-sm(30);
+    border-left: get_vw-sm(1) solid #ddd;
   }
   @include md() {
     margin-top: 30px;
-    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
   }
 }
