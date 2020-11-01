@@ -55,7 +55,7 @@
     height: 100vh;
     padding-top: get_vw(147);
     background-color: $bgc;
-    transition: all .6s;
+    transition: all .4s;
     z-index: 200;
     // overflow-y: auto;
     @include sm() {

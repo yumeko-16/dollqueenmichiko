@@ -1202,8 +1202,8 @@ textarea:focus {
   height: 100vh;
   padding-top: 30.625vw;
   background-color: #fff;
-  -webkit-transition: all .6s;
-  transition: all .6s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   z-index: 200;
 }
 
