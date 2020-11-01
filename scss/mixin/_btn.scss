@@ -3,21 +3,21 @@ $initType: 'normal';
 @mixin _btn($type:$initType) {
 
   @if( $type == 'normal' ) {
-    width: 100%;
-    padding: get_vw(10) 0;
+    min-width: get_vw(180);
+    padding: get_vw(10) get_vw(50);
     text-align: center;
     border: get_vw(1) solid #000;
     transition: all .3s;
     font-family: 'Fjalla One', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
     @include sm() {
-      width: auto;
-      min-width: 180px;
-      padding: get_vw-sm(10) 0;
+      min-width: get_vw-sm(180);
+      padding: get_vw-sm(10) get_vw-sm(50);
       border: get_vw-sm(1) solid #000;
     }
     @include md() {
-      padding: 10px 0;
+      min-width: 180px;
+      padding: 10px 50px;
       border: 1px solid #000;
     }
     &:hover {
