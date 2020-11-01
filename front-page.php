@@ -30,7 +30,7 @@
               <?php endwhile; ?>
           </ul>
         <?php else : ?>
-          <li><?php echo esc_html(get_catname($categorys[$i])) . "はまだありません。"; ?></li>
+          <li><?php echo "記事はまだありません。"; ?></li>
           </ul>
         <?php endif; ?>
 
@@ -78,7 +78,7 @@
             <?php endwhile; ?>
         </ul>
       <?php else : ?>
-        <li><?php echo esc_html(get_catname($categorys[$i])) . "はまだありません。"; ?></li>
+        <li><?php echo "記事はまだありません。"; ?></li>
         </ul>
       <?php endif; ?>
 
