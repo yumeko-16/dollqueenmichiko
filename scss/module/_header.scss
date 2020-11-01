@@ -19,30 +19,26 @@
     margin: 0 auto;
     padding: get_vw(10) get_vw(30);
     @include sm() {
-      padding: get_vw-sm(10) get_vw(30);
+      padding: get_vw-sm(10) get_vw-sm(30);
     }
     @include md() {
       padding: 10px 30px;
     }
   }
   &__logo {
-    display: flex;
-    align-items: center;
-    a {
-      display: block;
+    display: block;
+  }
+  &__img {
+    display: block;
+    width: get_vw(210);
+    height: get_vw(90);
+    @include sm() {
+      width: get_vw-sm(210);
+      height: get_vw-sm(90);
     }
-    img {
-      display: block;
-      width: get_vw(210);
-      height: get_vw(90);
-      @include sm() {
-        width: get_vw-sm(210);
-        height: get_vw-sm(90);
-      }
-      @include md() {
-        width: 210px;
-        height: 90px;
-      }
+    @include md() {
+      width: 210px;
+      height: 90px;
     }
   }
   &__global-nav {
