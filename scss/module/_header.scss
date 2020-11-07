@@ -79,9 +79,6 @@
         padding-bottom: 0;
         font-size: 22px;
       }
-      &:last-child {
-        padding-bottom: 0;
-      }
       &:not(:last-child) {
         @include sm() {
           margin-right: get_vw-sm(20);
