@@ -22,9 +22,13 @@
   else:
   ?>
     <?php if ( is_search() ) : ?>
-      <p>検索結果はありませんでした。</p>
+      <div class="content">
+        <p class="article__not">検索結果はありませんでした。</p>
+      </div>
     <?php else : ?>
-      <p>記事はありません。</p>
+      <div class="content">
+        <p class="article__not">記事はありません。</p>
+      </div>
     <?php endif; ?>
   <?php endif; ?>
 </ul>

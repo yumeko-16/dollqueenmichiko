@@ -309,6 +309,11 @@
   }
 }
 
+.article__not {
+  width: 100%;
+  text-align: center;
+}
+
 .comments__unit {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1237,10 +1242,6 @@ textarea:focus {
     padding-bottom: 0;
     font-size: 22px;
   }
-}
-
-.header__nav-item:last-child {
-  padding-bottom: 0;
 }
 
 @media (min-width: 481px) {

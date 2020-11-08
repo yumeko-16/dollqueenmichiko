@@ -30,8 +30,8 @@
           <?php endwhile; ?>
         </ul>
         <?php else : ?>
-            <li><?php echo "記事はまだありません。"; ?></li>
-          </ul>
+          <li class="article__not"><?php echo "記事はまだありません。"; ?></li>
+        </ul>
         <?php endif; ?>
 
         <?php
@@ -77,7 +77,7 @@
         <?php endwhile; ?>
       </ul>
       <?php else : ?>
-        <li><?php echo "記事はまだありません。"; ?></li>
+        <li class="article__not"><?php echo "記事はまだありません。"; ?></li>
       </ul>
       <?php endif; ?>
 
