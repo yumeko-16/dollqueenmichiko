@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="Doll, Writter, MICHIKO, 人形, 作家, 前野美智子">
+  <meta name="keywords" content="Doll, Queen, MICHIKO, 人形, 作家, 前野, 美智子">
   <meta name="description" content="人形作家前野美智子のWebサイト。創作人形で表現する独自の世界観を覗いてください。">
   <title><?php if ( !is_home() ) { wp_title(' | ', true, 'right'); } ?><?php bloginfo('name'); ?></title>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" />
@@ -29,7 +29,7 @@
     <header class="header">
       <div class="header__bar"></div>
       <div class="header__inner">
-        <h1><a href="<?php echo home_url() ?>" class="header__logo"><img class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Writer MICHIKO"></a></h1>
+        <h1><a href="<?php echo home_url() ?>" class="header__logo"><img class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Queen MICHIKO"></a></h1>
         <nav class="header__nav">
           <?php
           $args = array(

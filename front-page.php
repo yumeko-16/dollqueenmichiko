@@ -87,7 +87,7 @@
       // このカテゴリーの URL を取得
       $category_link = get_category_link($category_id);
       ?>
-      
+
       <div class="content__center">
         <a href="<?php echo esc_url($category_link); ?>" title="DOLL" class="content__btn">VIEW MORE</a>
       </div>
