@@ -2,9 +2,7 @@
 
 <main class="main">
   <section class="section">
-    <div class="section__inner">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/home/main.jpg" alt="メインビジュアル" class="mv__img">
-    </div>
+    <p><img src="<?php echo get_template_directory_uri(); ?>/images/home/main.jpg" alt="メインビジュアル" class="mv__img"></p>
   </section>
 
   <section class="section">
