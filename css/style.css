@@ -54,6 +54,10 @@
   background: #fff;
 }
 
+.section:nth-child(5) {
+  background: #f3f3f3;
+}
+
 .section__inner {
   max-width: 1660px;
   margin: 0 auto;
@@ -1298,6 +1302,10 @@ textarea:focus {
 }
 
 .header__nav-item:nth-child(4) a::after {
+  content: "つぶやき";
+}
+
+.header__nav-item:nth-child(5) a::after {
   content: "お問い合わせ";
 }
 
@@ -1542,6 +1550,24 @@ textarea:focus {
 
 @media (min-width: 769px) {
   .doll__title.title::after {
+    font-size: 12px;
+  }
+}
+
+.column__title.title::after {
+  display: block;
+  content: "つぶやき";
+  font-size: 2.5vw;
+}
+
+@media (min-width: 481px) {
+  .column__title.title::after {
+    font-size: 1.5625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .column__title.title::after {
     font-size: 12px;
   }
 }

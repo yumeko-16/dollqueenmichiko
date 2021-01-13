@@ -7,6 +7,8 @@
         <?php get_template_part('loop', 'news'); ?>
       <?php elseif( is_category('doll') ): ?>
         <?php get_template_part('loop', 'doll'); ?>
+      <?php elseif( is_category('column') ): ?>
+        <?php get_template_part('loop', 'column'); ?>
       <?php endif; ?>
     </div>
   </section>

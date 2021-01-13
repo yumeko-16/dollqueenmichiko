@@ -1,0 +1,15 @@
+.column {
+  &__title.title  {
+    &::after {
+      display: block;
+      content: "つぶやき";
+      font-size: get_vw(12);
+      @include sm() {
+        font-size: get_vw-sm(12);
+      }
+      @include md() {
+        font-size: 12px;
+      }
+    }
+  }
+}

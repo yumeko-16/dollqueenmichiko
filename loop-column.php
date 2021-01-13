@@ -1,13 +1,13 @@
-<h2 class="title news__title"><?php wp_title(''); ?></h2>
+<h2 class="title column__title"><?php wp_title(''); ?></h2>
 <div class="content">
-  <ul class="group group--news">
+  <ul class="group group--column">
     <?php
     if ( have_posts() ) :
       while ( have_posts() ) : the_post();
     ?>
-    <li class="article article--news">
+    <li class="article article--column">
       <a href="<?php the_permalink(); ?>">
-        <time datetime="<?php the_time('Y-m-d'); ?>" class="news__time"><?php the_time('Y.m.d(D)'); ?></time>
+        <time datetime="<?php the_time('Y-m-d'); ?>" class="column__time"><?php the_time('Y.m.d(D)'); ?></time>
         <h3 class="article__heading"><?php the_title(); ?></h3>
       </a>
     </li>
