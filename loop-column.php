@@ -1,32 +1,41 @@
 <h2 class="title column__title"><?php wp_title(''); ?></h2>
-<div class="content">
-  <ul class="group group--column">
-    <?php
-    if ( have_posts() ) :
-      while ( have_posts() ) : the_post();
-    ?>
-    <li class="article article--column">
-      <a href="<?php the_permalink(); ?>">
-        <time datetime="<?php the_time('Y-m-d'); ?>" class="column__time"><?php the_time('Y.m.d(D)'); ?></time>
-        <h3 class="article__heading"><?php the_title(); ?></h3>
-      </a>
-    </li>
-    <?php
-      endwhile;
-    else:
-    ?>
-      <?php if ( is_search() ) : ?>
-        <p class="article__not">検索結果はありませんでした。</p>
-      <?php else : ?>
-        <p class="article__not">記事はありません。</p>
-      <?php endif; ?>
-    <?php endif; ?>
-  </ul>
+<ul class="group">
   <?php
-  $custom_wp_pagenavi = array(
-    'wrapper_tag' => 'nav',
-    'wrapper_class' => 'pagenavi'
-  );
-  if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi($custom_wp_pagenavi); }
+  if ( have_posts() ) :
+    while ( have_posts() ) : the_post();
   ?>
-</div>
+  <li class="article">
+    <a href="<?php the_permalink(); ?>">
+      <figure>
+      <?php if ( has_post_thumbnail() ): ?>
+        <?php the_post_thumbnail('thumbnail', array('class' => 'article__thumb')); ?>
+      <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/noimage_180x180.png" alt="No Image" class="article__thumb">
+      <?php endif; ?>
+      </figure>
+      <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
+      <h3><?php the_title(); ?></h3>
+    </a>
+  </li>
+  <?php
+    endwhile;
+  else:
+  ?>
+    <?php if ( is_search() ) : ?>
+      <div class="content">
+        <p class="article__not">検索結果はありませんでした。</p>
+      </div>
+    <?php else : ?>
+      <div class="content">
+        <p class="article__not">記事はありません。</p>
+      </div>
+    <?php endif; ?>
+  <?php endif; ?>
+</ul>
+<?php
+$custom_wp_pagenavi = array(
+  'wrapper_tag' => 'nav',
+  'wrapper_class' => 'pagenavi'
+);
+if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi($custom_wp_pagenavi); }
+?>
