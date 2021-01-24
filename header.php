@@ -29,7 +29,7 @@
     <header class="header">
       <div class="header__bar"></div>
       <div class="header__inner">
-        <h1><a href="<?php echo home_url() ?>" class="header__logo"><img class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Queen MICHIKO"></a></h1>
+        <h1><a href="<?php echo home_url(); ?>" class="header__logo"><img class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Queen MICHIKO"></a></h1>
         <nav class="header__nav">
           <?php
           $args = array(
