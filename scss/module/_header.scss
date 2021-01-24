@@ -17,9 +17,9 @@
     align-items: center;
     max-width: 1660px;
     margin: 0 auto;
-    padding: get_vw(10);
+    padding: get_vw(10) get_vw(30);
     @include sm() {
-      padding: get_vw-sm(10);
+      padding: get_vw-sm(10) get_vw-sm(30);
     }
     @include md() {
       padding: 10px 30px;
