@@ -1172,8 +1172,7 @@ textarea:focus {
 
 .header__img {
   display: block;
-  width: 43.75vw;
-  height: 18.75vw;
+  width: 31.25vw;
 }
 
 @media (min-width: 481px) {

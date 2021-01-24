@@ -30,8 +30,7 @@
   }
   &__img {
     display: block;
-    width: get_vw(210);
-    height: get_vw(90);
+    width: get_vw(150);
     @include sm() {
       width: get_vw-sm(210);
       height: get_vw-sm(90);
