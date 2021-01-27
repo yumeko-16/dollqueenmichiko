@@ -1151,12 +1151,12 @@ textarea:focus {
           align-items: center;
   max-width: 1660px;
   margin: 0 auto;
-  padding: 2.08333vw 6.25vw;
+  padding: 4.16667vw 6.25vw;
 }
 
 @media (min-width: 481px) {
   .header__inner {
-    padding: 1.30208vw 3.90625vw;
+    padding: 2.60417vw 3.90625vw;
   }
 }
 
