@@ -1172,20 +1172,20 @@ textarea:focus {
 
 .header__img {
   display: block;
-  width: 31.25vw;
+  width: 25vw;
 }
 
 @media (min-width: 481px) {
   .header__img {
-    width: 27.34375vw;
-    height: 11.71875vw;
+    width: 24.73958vw;
+    height: 11.06771vw;
   }
 }
 
 @media (min-width: 769px) {
   .header__img {
-    width: 210px;
-    height: 90px;
+    width: 190px;
+    height: 85px;
   }
 }
 
