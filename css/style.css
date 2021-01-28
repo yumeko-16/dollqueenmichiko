@@ -1092,6 +1092,26 @@ ol {
   list-style: none;
 }
 
+.sp-display {
+  display: block;
+}
+
+@media (min-width: 481px) {
+  .sp-display {
+    display: none;
+  }
+}
+
+.pc-display {
+  display: none;
+}
+
+@media (min-width: 481px) {
+  .pc-display {
+    display: block;
+  }
+}
+
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=tel]:focus,
@@ -1493,8 +1513,8 @@ textarea:focus {
 }
 
 .mv__img {
-  display: block;
   width: 100%;
+  vertical-align: top;
 }
 
 .news__title.title::after {

@@ -26,6 +26,20 @@ ol {
   list-style: none;
 }
 
+.sp-display {
+  display: block;
+  @include sm() {
+    display: none;
+  }
+}
+
+.pc-display {
+  display: none;
+  @include sm() {
+    display: block;
+  }
+}
+
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=tel]:focus,

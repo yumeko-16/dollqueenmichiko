@@ -2,7 +2,10 @@
 
 <main class="main">
   <section class="section">
-    <p><img src="<?php echo get_template_directory_uri(); ?>/images/home/main.jpg" alt="メインビジュアル" class="mv__img"></p>
+    <p>
+      <img src="<?php echo get_template_directory_uri(); ?>/images/home/main-sp.jpg" alt="メインビジュアル" class="mv__img sp-display">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/home/main-pc.jpg" alt="メインビジュアル" class="mv__img pc-display">
+    </p>
   </section>
 
   <section class="section">
