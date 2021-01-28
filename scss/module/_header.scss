@@ -33,11 +33,9 @@
     width: get_vw(120);
     @include sm() {
       width: get_vw-sm(190);
-      height: get_vw-sm(85);
     }
     @include md() {
       width: 190px;
-      height: 85px;
     }
   }
   &__global-nav {
