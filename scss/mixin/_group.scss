@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   @include sm() {
-    justify-content: space-between;
   }
   @include md() {
   }

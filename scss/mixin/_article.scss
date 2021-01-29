@@ -2,12 +2,12 @@
   width: 100%;
   padding: get_vw(15) 0;
   @include sm() {
-    width: 45%;
-    padding: get_vw-sm(15) 0;
+    width: 50%;
+    padding: get_vw-sm(15) get_vw-sm(30);
   }
   @include md() {
-    width: 23%;
-    padding: 15px 0;
+    width: 25%;
+    padding: 15px 30px;
   }
   &--news {
     width: 100%;
