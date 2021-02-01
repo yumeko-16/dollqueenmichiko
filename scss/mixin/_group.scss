@@ -2,8 +2,23 @@
   display: flex;
   flex-wrap: wrap;
   @include sm() {
+    justify-content: space-between;
+    ::before,
+    ::after {
+      content: "";
+      display: block;
+      width: 21%;
+      height: 0;
+    }
+    ::before {
+      order: 1;
+    }
   }
   @include md() {
+    ::before,
+    ::after {
+      width: 21%;
+    }
   }
   &--news {
     flex-direction: column;
