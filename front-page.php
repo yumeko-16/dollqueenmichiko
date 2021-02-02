@@ -89,7 +89,7 @@
               <?php endif; ?>
             </figure>
             <div class="article__caption">
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
+              <time datetime="<?php the_time('Y-m-d'); ?>" class="article__time"><?php the_time('Y.m.d(D)'); ?></time>
               <h3><?php the_title(); ?></h3>
             </div>
           </a>
@@ -137,7 +137,7 @@
               <?php endif; ?>
             </figure>
             <div class="article__caption">
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d(D)'); ?></time>
+              <time datetime="<?php the_time('Y-m-d'); ?>" class="article__time"><?php the_time('Y.m.d(D)'); ?></time>
               <h3><?php the_title(); ?></h3>
             </div>
           </a>
