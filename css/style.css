@@ -1481,7 +1481,7 @@ textarea:focus {
   position: absolute;
   width: 8.33333vw;
   height: 1.04167vw;
-  background: #636363;
+  background: #333;
   -webkit-transition: .5s;
   transition: .5s;
   border-radius: 10.41667vw;
