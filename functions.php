@@ -15,7 +15,7 @@ add_theme_support( 'menus' );
 add_filter('wp_img_tag_add_width_and_height_attr', '__return_false');
 
 /**
- * コメントフォームの「名前」「メールアドレス」「ウェブサイト」を削除
+ * コメントフォームの「メールアドレス」「ウェブサイト」を削除
  */
 add_filter('comment_form_default_fields', 'my_comment_form_default_fields');
 function my_comment_form_default_fields( $args ) {

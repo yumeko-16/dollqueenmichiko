@@ -380,6 +380,22 @@
   text-align: center;
 }
 
+.comments {
+  padding: 10.41667vw 0;
+}
+
+@media (min-width: 481px) {
+  .comments {
+    padding: 6.51042vw 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .comments {
+    padding: 50px 0;
+  }
+}
+
 .comments__unit {
   display: -webkit-box;
   display: -webkit-flex;
@@ -577,20 +593,31 @@
   display: none !important;
 }
 
-.comment:not(:last-child) {
-  padding-bottom: 6.25vw;
+.comment {
+  padding: 4.16667vw 0;
+  border-bottom: 0.20833vw solid #ddd;
 }
 
 @media (min-width: 481px) {
-  .comment:not(:last-child) {
-    padding-bottom: 3.90625vw;
+  .comment {
+    padding: 2.60417vw 0;
+    border-bottom: 0.13021vw solid #ddd;
   }
 }
 
 @media (min-width: 769px) {
-  .comment:not(:last-child) {
-    padding-bottom: 30px;
+  .comment {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
   }
+}
+
+.comment:first-child {
+  border-top: none;
+}
+
+.comment:last-child {
+  border-bottom: none;
 }
 
 .comment-reply-title {
@@ -627,36 +654,63 @@
 
 .commentlist {
   margin: 6.25vw 0;
-  padding: 6.25vw 0;
-  border-top: solid #ddd;
-  border-width: 0.20833vw 0 0;
+  border-top: 0.20833vw solid #ddd;
+  border-bottom: 0.20833vw solid #ddd;
 }
 
 @media (min-width: 481px) {
   .commentlist {
     margin: 3.90625vw 0;
-    padding: 3.90625vw 0;
-    border-width: 0.13021vw 0 0;
+    border-top: 0.13021vw solid #ddd;
+    border-bottom: 0.13021vw solid #ddd;
   }
 }
 
 @media (min-width: 769px) {
   .commentlist {
     margin: 30px 0;
-    padding: 30px 0;
-    border-width: 1px 0 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 }
 
+.comment-body p {
+  margin: 2.08333vw 0;
+}
+
+@media (min-width: 481px) {
+  .comment-body p {
+    margin: 1.30208vw 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .comment-body p {
+    margin: 10px 0;
+  }
+}
+
+.comment-author .says {
+  display: none;
+}
+
+.comment-meta a {
+  color: #999;
+}
+
+.comment-reply-link {
+  color: #999;
+}
+
 .children {
-  margin-top: 6.25vw;
+  margin-top: 4.16667vw;
   padding-left: 6.25vw;
   border-left: 0.20833vw solid #ddd;
 }
 
 @media (min-width: 481px) {
   .children {
-    margin-top: 3.90625vw;
+    margin-top: 2.60417vw;
     padding-left: 3.90625vw;
     border-left: 0.13021vw solid #ddd;
   }
@@ -664,10 +718,15 @@
 
 @media (min-width: 769px) {
   .children {
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 30px;
     border-left: 1px solid #ddd;
   }
+}
+
+.children .comment {
+  border-top: none;
+  border-bottom: none;
 }
 
 .pagenavi {

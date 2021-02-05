@@ -1,4 +1,11 @@
 .comments {
+  padding: get_vw(50) 0;
+  @include sm() {
+    padding: get_vw-sm(50) 0;
+  }
+  @include md() {
+    padding: 50px 0;
+  }
   &__unit {
     display: flex;
     align-items: center;
@@ -101,14 +108,21 @@
 }
 
 .comment {
-  &:not(:last-child) {
-    padding-bottom: get_vw(30);
-    @include sm() {
-      padding-bottom: get_vw-sm(30);
-    }
-    @include md() {
-      padding-bottom: 30px;
-    }
+  padding: get_vw(20) 0;
+  border-bottom: get_vw(1) solid #ddd;
+  @include sm() {
+    padding: get_vw-sm(20) 0;
+    border-bottom: get_vw-sm(1) solid #ddd;
+  }
+  @include md() {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  &:first-child {
+    border-top: none;
+  }
+  &:last-child {
+    border-bottom: none;
   }
   &-reply-title {
     margin-bottom: get_vw(30);
@@ -130,34 +144,61 @@
   }
   &list {
     margin: get_vw(30) 0;
-    padding: get_vw(30) 0;
-    border-top: solid #ddd;
-    border-width: get_vw(1) 0 0;
+    border-top: get_vw(1) solid #ddd;
+    border-bottom: get_vw(1) solid #ddd;
     @include sm() {
       margin: get_vw-sm(30) 0;
-      padding: get_vw-sm(30) 0;
-      border-width: get_vw-sm(1) 0 0;
+      border-top: get_vw-sm(1) solid #ddd;
+      border-bottom: get_vw-sm(1) solid #ddd;
     }
     @include md() {
       margin: 30px 0;
-      padding: 30px 0;
-      border-width: 1px 0 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
     }
+  }
+  &-body {
+    p {
+      margin: get_vw(10) 0;
+      @include sm() {
+        margin: get_vw-sm(10) 0;
+      }
+      @include md() {
+        margin: 10px 0;
+      }
+    }
+  }
+  &-author {
+    .says {
+      display: none;
+    }
+  }
+  &-meta {
+    a {
+      color: #999;
+    }
+  }
+  &-reply-link {
+    color: #999;
   }
 }
 
 .children {
-  margin-top: get_vw(30);
+  margin-top: get_vw(20);
   padding-left: get_vw(30);
   border-left: get_vw(1) solid #ddd;
   @include sm() {
-    margin-top: get_vw-sm(30);
+    margin-top: get_vw-sm(20);
     padding-left: get_vw-sm(30);
     border-left: get_vw-sm(1) solid #ddd;
   }
   @include md() {
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 30px;
     border-left: 1px solid #ddd;
+  }
+  .comment {
+    border-top: none;
+    border-bottom: none;
   }
 }
