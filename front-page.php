@@ -43,7 +43,7 @@
         ?>
 
         <div class="content__center">
-          <a href="<?php echo esc_url($category_link); ?>" title="NEWS" class="content__btn">VIEW MORE</a>
+          <a href="<?php echo esc_url($category_link); ?>" title="NEWS" class="content__btn">もっと見る</a>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
       ?>
 
       <div class="content__center">
-        <a href="<?php echo esc_url($category_link); ?>" title="DOLL" class="content__btn">VIEW MORE</a>
+        <a href="<?php echo esc_url($category_link); ?>" title="DOLL" class="content__btn">もっと見る</a>
       </div>
     </div>
   </section>
@@ -157,7 +157,7 @@
       ?>
 
       <div class="content__center">
-        <a href="<?php echo esc_url($category_link); ?>" title="COLUMN" class="content__btn">VIEW MORE</a>
+        <a href="<?php echo esc_url($category_link); ?>" title="COLUMN" class="content__btn">もっと見る</a>
       </div>
     </div>
   </section>

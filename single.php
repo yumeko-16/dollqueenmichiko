@@ -26,7 +26,7 @@
           $link = get_category_link($cat_id);
         ?>
         <div class="content__center">
-          <a href="<?php echo $link; ?>" class="content__btn">BACK</a>
+          <a href="<?php echo $link; ?>" class="content__btn">戻る</a>
         </div>
       </div>
     </div>

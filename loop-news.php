@@ -31,5 +31,5 @@
   ?>
 </div>
 <div class="content__center">
-  <a href="<?php echo home_url(); ?>" class="content__btn">HOME</a>
+  <a href="<?php echo home_url(); ?>" class="content__btn">ホームに戻る</a>
 </div>

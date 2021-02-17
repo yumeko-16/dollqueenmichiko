@@ -42,5 +42,5 @@ $custom_wp_pagenavi = array(
 if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi($custom_wp_pagenavi); }
 ?>
 <div class="content__center">
-  <a href="<?php echo home_url(); ?>" class="content__btn">HOME</a>
+  <a href="<?php echo home_url(); ?>" class="content__btn">ホームに戻る</a>
 </div>
