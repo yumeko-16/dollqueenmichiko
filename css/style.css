@@ -231,6 +231,10 @@
   }
 }
 
+.article:hover .article__heading {
+  color: #9c82a2;
+}
+
 .article--news {
   width: 100%;
   padding: 6.25vw;

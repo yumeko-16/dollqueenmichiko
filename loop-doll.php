@@ -15,7 +15,7 @@
       </figure>
       <div class="article__caption">
         <time datetime="<?php the_time('Y-m-d'); ?>" class="article__time"><?php the_time('Y.m.d(D)'); ?></time>
-        <h3><?php the_title(); ?></h3>
+        <h3 class="article__heading"><?php the_title(); ?></h3>
       </div>
     </a>
   </li>

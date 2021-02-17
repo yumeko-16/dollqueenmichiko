@@ -9,6 +9,11 @@
     width: 21%;
     padding: 15px 0;
   }
+  &:hover {
+    .article__heading {
+      color: $main;
+    }
+  }
   &--news {
     width: 100%;
     padding: get_vw(30);
