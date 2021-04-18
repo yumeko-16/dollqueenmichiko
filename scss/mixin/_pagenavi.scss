@@ -2,26 +2,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: get_vw(30);
+  @include sm() {
+    margin-top: get_vw-sm(30);
+  }
+  @include md() {
+    margin-top: 30px;
+  }
   span,
   a {
     margin: 0 get_vw(5);
-    padding: get_vw(5);
+    padding: get_vw(15);
     @include sm() {
       margin: 0 get_vw-sm(5);
-      padding: get_vw-sm(5);
+      padding: get_vw-sm(15);
     }
     @include md() {
       margin: 0 5px;
-      padding: 5px;
+      padding: 15px;
+    }
+  }
+  a {
+    border: get_vw(1) solid $txt;
+    @include sm() {
+      border: get_vw-sm(1) solid $txt;
+    }
+    @include md() {
+      border: 1px solid $txt;
     }
   }
   .current {
-    font-size: get_vw(20);
+    border: get_vw(1) solid $main;
+    background-color: $main;
+    color: $txt--another;
     @include sm() {
-      font-size: get_vw-sm(20);
+      border: get_vw-sm(1) solid $txt;
     }
     @include md() {
-      font-size: 20px;
+      border: 1px solid $txt;
     }
   }
 }

@@ -775,19 +775,32 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 6.25vw;
+}
+
+@media (min-width: 481px) {
+  .pagenavi {
+    margin-top: 3.90625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .pagenavi {
+    margin-top: 30px;
+  }
 }
 
 .pagenavi span,
 .pagenavi a {
   margin: 0 1.04167vw;
-  padding: 1.04167vw;
+  padding: 3.125vw;
 }
 
 @media (min-width: 481px) {
   .pagenavi span,
   .pagenavi a {
     margin: 0 0.65104vw;
-    padding: 0.65104vw;
+    padding: 1.95313vw;
   }
 }
 
@@ -795,23 +808,41 @@
   .pagenavi span,
   .pagenavi a {
     margin: 0 5px;
-    padding: 5px;
+    padding: 15px;
+  }
+}
+
+.pagenavi a {
+  border: 0.20833vw solid #333;
+}
+
+@media (min-width: 481px) {
+  .pagenavi a {
+    border: 0.13021vw solid #333;
+  }
+}
+
+@media (min-width: 769px) {
+  .pagenavi a {
+    border: 1px solid #333;
   }
 }
 
 .pagenavi .current {
-  font-size: 4.16667vw;
+  border: 0.20833vw solid #9c82a2;
+  background-color: #9c82a2;
+  color: #fff;
 }
 
 @media (min-width: 481px) {
   .pagenavi .current {
-    font-size: 2.60417vw;
+    border: 0.13021vw solid #333;
   }
 }
 
 @media (min-width: 769px) {
   .pagenavi .current {
-    font-size: 20px;
+    border: 1px solid #333;
   }
 }
 
