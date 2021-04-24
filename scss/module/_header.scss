@@ -1,5 +1,12 @@
 .header {
   width: 100%;
+  background-color: #fff;
+  &.scroll-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
   &__bar {
     width: 100%;
     height: get_vw(40);
@@ -9,6 +16,9 @@
     }
     @include md() {
       height: 40px;
+    }
+    &.scroll-nav {
+      height: 0;
     }
   }
   &__inner {
@@ -24,6 +34,15 @@
     @include md() {
       padding: 20px 30px;
     }
+    &.scroll-nav {
+      padding: get_vw(10) get_vw(30);
+      @include sm() {
+        padding: get_vw-sm(10) get_vw-sm(30);
+      }
+      @include md() {
+        padding: 10px 30px;
+      }
+    }
   }
   &__logo {
     display: block;
@@ -36,6 +55,14 @@
     }
     @include md() {
       width: 190px;
+    }
+    &.scroll-nav {
+      @include sm() {
+        width: get_vw-sm(100);
+      }
+      @include md() {
+        width: 100px;
+      }
     }
   }
   &__global-nav {
@@ -52,7 +79,7 @@
     height: 100vh;
     padding-top: get_vw(147);
     background-color: $bgc;
-    transition: all .4s;
+    transition: all 0.4s;
     z-index: 200;
     // overflow-y: auto;
     @include sm() {
@@ -66,7 +93,7 @@
     &-item {
       padding-bottom: get_vw(30);
       text-align: center;
-      font-family: 'Fjalla One', sans-serif;
+      font-family: "Fjalla One", sans-serif;
       font-size: get_vw(22);
       @include sm() {
         padding-bottom: 0;
@@ -88,7 +115,7 @@
         display: flex;
         flex-direction: column;
         &::after {
-          font-family: 'Noto Sans JP', sans-serif;
+          font-family: "Noto Sans JP", sans-serif;
           font-size: get_vw(12);
           @include sm() {
             font-size: get_vw-sm(12);
@@ -96,6 +123,9 @@
           @include md() {
             font-size: 12px;
           }
+        }
+        &:hover {
+          color: $main;
         }
       }
       &:nth-child(1) a::after {
@@ -135,7 +165,7 @@
       width: get_vw(40);
       height: get_vw(5);
       background: #333;
-      transition: .5s;
+      transition: 0.5s;
       border-radius: get_vw(50);
       &--1 {
         top: 0;

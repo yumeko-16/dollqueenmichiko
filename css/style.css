@@ -1321,6 +1321,14 @@ textarea:focus {
 
 .header {
   width: 100%;
+  background-color: #fff;
+}
+
+.header.scroll-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .header__bar {
@@ -1339,6 +1347,10 @@ textarea:focus {
   .header__bar {
     height: 40px;
   }
+}
+
+.header__bar.scroll-nav {
+  height: 0;
 }
 
 .header__inner {
@@ -1371,6 +1383,22 @@ textarea:focus {
   }
 }
 
+.header__inner.scroll-nav {
+  padding: 2.08333vw 6.25vw;
+}
+
+@media (min-width: 481px) {
+  .header__inner.scroll-nav {
+    padding: 1.30208vw 3.90625vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .header__inner.scroll-nav {
+    padding: 10px 30px;
+  }
+}
+
 .header__logo {
   display: block;
 }
@@ -1389,6 +1417,18 @@ textarea:focus {
 @media (min-width: 769px) {
   .header__img {
     width: 190px;
+  }
+}
+
+@media (min-width: 481px) {
+  .header__img.scroll-nav {
+    width: 13.02083vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .header__img.scroll-nav {
+    width: 100px;
   }
 }
 
@@ -1413,8 +1453,8 @@ textarea:focus {
   height: 100vh;
   padding-top: 30.625vw;
   background-color: #fff;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   z-index: 200;
 }
 
@@ -1432,7 +1472,7 @@ textarea:focus {
 .header__nav-item {
   padding-bottom: 6.25vw;
   text-align: center;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-size: 4.58333vw;
 }
 
@@ -1475,7 +1515,7 @@ textarea:focus {
 }
 
 .header__nav-item a::after {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 2.5vw;
 }
 
@@ -1489,6 +1529,10 @@ textarea:focus {
   .header__nav-item a::after {
     font-size: 12px;
   }
+}
+
+.header__nav-item a:hover {
+  color: #9c82a2;
 }
 
 .header__nav-item:nth-child(1) a::after {
@@ -1546,8 +1590,8 @@ textarea:focus {
   width: 8.33333vw;
   height: 1.04167vw;
   background: #333;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   border-radius: 10.41667vw;
 }
 

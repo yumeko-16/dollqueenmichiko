@@ -3,88 +3,42 @@
 =========================================================*/
 const toggleNav = () => {
   const body = document.body;
-  const burger = document.querySelector('#js-burger');
+  const burger = document.querySelector("#js-burger");
 
-  burger.addEventListener('click', () => {
-    body.classList.toggle('nav-open');
+  burger.addEventListener("click", () => {
+    body.classList.toggle("nav-open");
   });
-}
+};
 toggleNav();
 
 
 /* ========================================================
-スクロールでトップに戻るボタンを表示
+スクロールでサイズが小さくなるヘッダー
 =========================================================*/
-// スクロールして何ピクセルでアニメーションさせるか
-var px_change = 1;
-// スクロールのイベントハンドラを登録
-window.addEventListener('scroll', (e) => {
-  // 変化するポイントまでスクロールしたらクラスを追加
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if ( scrollTop > px_change ) {
-    document.querySelector( "#js-pagetop" ).classList.add( "fadein" );
-    // 変化するポイント以前であればクラスを削除
+window.addEventListener("scroll", () => {
+  // 要素を取得
+  const header = document.querySelector("#header");
+  const headerBar = document.querySelector("#header__bar");
+  const headerInner = document.querySelector("#header__inner");
+  const headerImg = document.querySelector("#header__img");
+  // ヘッダーの高さを取得
+  const headerHeight = header.clientHeight;
+  // 現在地を示す変数を定義
+  let pos = 0;
+
+  // スクロール量を取得
+  pos = window.scrollY;
+
+  // スクロール位置がヘッダーの高さ分より大きい場合にclass名を追加し、そうでない場合にclass名を削除
+  if (pos > headerHeight) {
+    header.classList.add("scroll-nav");
+    headerBar.classList.add("scroll-nav");
+    headerInner.classList.add("scroll-nav");
+    headerImg.classList.add("scroll-nav");
   } else {
-    document.querySelector( "#js-pagetop" ).classList.remove( "fadein" );
+    header.classList.remove("scroll-nav");
+    headerBar.classList.remove("scroll-nav");
+    headerInner.classList.remove("scroll-nav");
+    headerImg.classList.remove("scroll-nav");
   }
 });
-
-
-/* ========================================================
-トップに戻るボタンのスムーズスクロール
-=========================================================*/
-document.querySelector( "#js-pagetop" ).addEventListener('click', (e) => {
-  anime.remove("html, body");
-  anime({
-    targets: "html, body",
-    scrollTop: 0,
-    dulation: 600,
-    easing: 'easeOutCubic',
-  });
-  return false;
-});
-
-
-/* ========================================================
-スクロールフェードイン
-=========================================================*/
-const scrollAnimationElm = document.querySelectorAll('.sa');
-const scrollAnimationFunc = () => {
-  for (let i = 0; i < scrollAnimationElm.length; i++) {
-    const triggerMargin = 50;
-    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-      scrollAnimationElm[i].classList.add('show');
-    }
-  }
-}
-
-scrollAnimationFunc();
-window.addEventListener('scroll', scrollAnimationFunc);
-
-
-/* ========================================================
-タブメニュー
-=========================================================*/
-const tabTriggers = document.querySelectorAll(".js-tab-trigger");
-const tabTargets = document.querySelectorAll(".js-tab-target");
-
-for (let i = 0; i < tabTriggers.length; i++) {
-  tabTriggers[i].addEventListener("click", (e) => {
-    let currentMenu = e.currentTarget;
-    let currentContent = document.getElementById(currentMenu.dataset.id);
-
-    for (let i = 0; i < tabTriggers.length; i++) {
-      tabTriggers[i].classList.remove("is-active");
-    }
-
-    currentMenu.classList.add("is-active");
-
-    for (let i = 0; i < tabTargets.length; i++) {
-      tabTargets[i].classList.remove("is-active");
-    }
-
-    if (currentContent !== null) {
-      currentContent.classList.add("is-active");
-    }
-  });
-}

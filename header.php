@@ -7,7 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="Doll, Queen, MICHIKO, 人形, 作家, 前野, 美智子">
   <meta name="description" content="人形作家前野美智子のWebサイト。創作人形で表現する独自の世界観を覗いてください。">
-  <title><?php if ( !is_home() ) { wp_title(' | ', true, 'right'); } ?><?php bloginfo('name'); ?></title>
+  <title>
+    <?php
+    if (!is_home()) {
+      wp_title(' | ', true, 'right');
+    }
+    ?>
+    <?php bloginfo('name'); ?>
+  </title>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
@@ -26,10 +33,10 @@
 
 <body>
   <div class="wrap">
-    <header class="header">
-      <div class="header__bar"></div>
-      <div class="header__inner">
-        <h1><a href="<?php echo home_url(); ?>" class="header__logo"><img class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Queen MICHIKO"></a></h1>
+    <header id="header" class="header">
+      <div id="header__bar" class="header__bar"></div>
+      <div id="header__inner" class="header__inner">
+        <h1><a href="<?php echo home_url(); ?>" class="header__logo"><img id="header__img" class="header__img" src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="Doll Queen MICHIKO"></a></h1>
         <nav class="header__nav">
           <?php
           $args = array(

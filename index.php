@@ -3,11 +3,11 @@
 <main class="main">
   <section class="section">
     <div class="section__inner">
-      <?php if ( is_category('news') ): ?>
+      <?php if (is_category('news')) : ?>
         <?php get_template_part('loop', 'news'); ?>
-      <?php elseif( is_category('doll') ): ?>
+      <?php elseif (is_category('doll')) : ?>
         <?php get_template_part('loop', 'doll'); ?>
-      <?php elseif( is_category('column') ): ?>
+      <?php elseif (is_category('column')) : ?>
         <?php get_template_part('loop', 'column'); ?>
       <?php endif; ?>
     </div>
