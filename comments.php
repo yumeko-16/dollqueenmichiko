@@ -10,11 +10,14 @@
   </ol>
   <?php
   $comment_form_args = array(
-    'fields'              => array(
-      'author' => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Name') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
-        '<dd class="comments__input">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />' . '</dl>',
-      'email'  => '',
-      'url'    => '',
+    'fields' => array(
+      'author'            => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Name') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
+        '<dd class="comments__input">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />' . '</dd>' . '</dl>',
+
+      'email'             => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Email') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
+        '<dd class="comments__input">' . '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' />' . '</dd>' . '</dl>',
+
+      'url'               => '',
     ),
     'comment_field'       => '<dl class="comments__unit">' . '<dt class="comments__label">' . _x('Comment', 'noun') . '</dt>' . '<dd class="comments__textarea">' . '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' . '</textarea>' . '</dd>' . '</dl>',
     'title_reply'         => 'コメントを残す',
