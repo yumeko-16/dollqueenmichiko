@@ -14,8 +14,7 @@
       'author'            => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Name') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
         '<dd class="comments__input">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />' . '</dd>' . '</dl>',
 
-      'email'             => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Email') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
-        '<dd class="comments__input">' . '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' />' . '</dd>' . '</dl>',
+      'email'             => '',
 
       'url'               => '',
     ),
