@@ -12,7 +12,7 @@
   $comment_form_args = array(
     'fields' => array(
       'author'            => '<dl class="comments__unit">' . '<dt class="comments__label" for="author">' . __('Name') . ($req ? ' <span class="required">*</span>' : '') . '</dt> ' .
-        '<dd class="comments__input">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />' . '</dd>' . '</dl>',
+        '<dd class="comments__input">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />' . '</dl>',
 
       'email'             => '',
 
